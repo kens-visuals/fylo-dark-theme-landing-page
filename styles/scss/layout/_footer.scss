@@ -1,19 +1,67 @@
 @use '../abstracts/index.scss' as *;
 
-.attribution {
-  font-size: 1rem;
-  text-align: center;
-  margin-block: 2rem;
-
-  &__link:link,
-  &__link:visited {
-    text-transform: uppercase;
-    // color: ;
-    transition: all 0.3s;
+.footer {
+  &__access {
   }
 
-  &__link:hover,
-  &__link:active {
-    // color: ;
+  &__logo {
+  }
+
+  &__info {
+    &-list {
+    }
+
+    &-item {
+      &--place {
+      }
+
+      &--phone {
+      }
+
+      &--email {
+      }
+    }
+  }
+
+  &__nav {
+    &-list {
+    }
+
+    &-item {
+    }
+
+    &-link {
+    }
+  }
+
+  &__social {
+    &-list {
+    }
+
+    &-item {
+    }
+
+    &-link {
+    }
+
+    &-icon {
+    }
+  }
+
+  &__attribution {
+    font-size: 1rem;
+    text-align: center;
+
+    &-link:link,
+    &-link:visited {
+      text-transform: uppercase;
+      // color: ;
+      transition: all 0.3s;
+    }
+
+    &-link:hover,
+    &-link:active {
+      // color: ;
+    }
   }
 }
