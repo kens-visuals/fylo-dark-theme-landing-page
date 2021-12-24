@@ -1,17 +1,33 @@
 @use '../abstracts/index.scss' as *;
 
 .heading {
+  font-family: $font-secondary;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+
   &--secondary {
+    font-weight: 700;
   }
 
   &--tertiary {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
   }
 }
 
 .text {
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 2rem;
+  font-weight: 400;
+
   &--secondary {
   }
 
   &--tertiary {
+    padding: 0 1rem;
   }
 }

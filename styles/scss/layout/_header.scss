@@ -1,12 +1,40 @@
 @use '../abstracts/index.scss' as *;
 
 .intro {
+  background-color: $color-primary--dark;
+  padding: 2.2rem 0 0 0;
+  position: relative;
+
   &__img {
+    margin: 5rem 0 3rem 0;
+    padding: 0 1.5rem;
+    z-index: 1;
+    position: relative;
   }
 
   &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
   }
 
   &__header {
+    z-index: 1;
+  }
+
+  &__pattern {
+    height: 21rem;
+    width: 100%;
+    background-color: $color-primary;
+    position: absolute;
+    bottom: 0;
+
+    &::before {
+      content: url('../../../images/bg-curvy-mobile.svg');
+      position: absolute;
+      bottom: 20rem;
+    }
   }
 }

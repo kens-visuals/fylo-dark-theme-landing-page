@@ -1,0 +1,188 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  color: white;
+  background-color: #181f2a;
+  font-size: 1.6rem;
+  font-family: "Open Sans", sans-serif;
+  text-rendering: optimizeSpeed;
+}
+
+.heading {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+.heading--secondary {
+  font-weight: 700;
+}
+.heading--tertiary {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.text {
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 1.5;
+  padding: 0 2rem;
+  font-weight: 400;
+}
+.text--tertiary {
+  padding: 0 1rem;
+}
+
+.container {
+  width: 89%;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.intro__nav {
+  margin-bottom: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.intro__logo {
+  width: 8rem;
+}
+.intro__list {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.intro__link:link, .intro__link:visited {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: lighter;
+  font-family: "Raleway", sans-serif;
+  text-decoration: none;
+  letter-spacing: 0.1rem;
+}
+
+.intro {
+  background-color: #1c2431;
+  padding: 2.2rem 0 0 0;
+  position: relative;
+}
+.intro__img {
+  margin: 5rem 0 3rem 0;
+  padding: 0 1.5rem;
+  z-index: 1;
+  position: relative;
+}
+.intro__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem;
+}
+.intro__header {
+  z-index: 1;
+}
+.intro__pattern {
+  height: 21rem;
+  width: 100%;
+  background-color: #181f2a;
+  position: absolute;
+  bottom: 0;
+}
+.intro__pattern::before {
+  content: url("../../../images/bg-curvy-mobile.svg");
+  position: absolute;
+  bottom: 20rem;
+}
+
+.details {
+  margin: 13rem 0;
+}
+.details > *:not(:last-child) {
+  margin-bottom: 9rem;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.detail__img {
+  width: 6.5rem;
+  margin-bottom: 3rem;
+}
+.detail:nth-child(2) .detail__img {
+  width: 5.5rem;
+}
+
+.footer__attribution {
+  font-size: 1rem;
+  text-align: center;
+}
+.footer__attribution-link:link, .footer__attribution-link:visited {
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.btn:link, .btn:visited {
+  width: 24rem;
+  color: white;
+  background-image: linear-gradient(to right, #65e2d9, #339ecc);
+  font-size: 1.4rem;
+  font-weight: 400;
+  border-radius: 5rem;
+  text-align: center;
+  text-decoration: none;
+  padding: 1.4rem 2rem;
+  z-index: 1;
+}
+
+/*# sourceMappingURL=style.css.map */

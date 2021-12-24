@@ -2,19 +2,36 @@
 
 .intro {
   &__nav {
+    margin-bottom: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__logo {
-    &-link {
-    }
+    width: 8rem;
   }
 
   &__list {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
   }
 
   &__item {
   }
 
   &__link {
+    &:link,
+    &:visited {
+      color: $color-secondary--light;
+      font-size: 1.1rem;
+      font-weight: lighter;
+      font-family: $font-secondary;
+      text-decoration: none;
+      letter-spacing: 0.1rem;
+    }
   }
 }
