@@ -36,10 +36,6 @@ const appearOnScroll = function () {
     threshold: 0.5,
     rootMargin: '0px 0px -200px 0px',
   };
-  const testimonialsOptions = {
-    threshold: 0.5,
-    rootMargin: '0px 0px -100px 0px',
-  };
 
   const items = function (entries) {
     entries.forEach((entry) => {
@@ -50,6 +46,15 @@ const appearOnScroll = function () {
         detailsObserver.unobserve(detail);
       });
     });
+  };
+
+  const detailsObserver = new IntersectionObserver(items, detailsOptions);
+
+  details.forEach((detail) => detailsObserver.observe(detail));
+
+  const testimonialsOptions = {
+    threshold: 0.5,
+    rootMargin: '0px 0px -100px 0px',
   };
 
   const tests = function (entries) {
@@ -67,13 +72,11 @@ const appearOnScroll = function () {
     });
   };
 
-  const detailsObserver = new IntersectionObserver(items, detailsOptions);
   const testimonialsObserver = new IntersectionObserver(
     tests,
     testimonialsOptions
   );
 
-  details.forEach((detail) => detailsObserver.observe(detail));
   testimonials.forEach((testimonial) =>
     testimonialsObserver.observe(testimonial)
   );
