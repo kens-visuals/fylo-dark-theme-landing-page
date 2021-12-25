@@ -145,7 +145,7 @@ body {
 }
 @media (min-width: 810px) {
   .intro {
-    padding: 8rem 0 20rem 0;
+    padding-top: 8rem;
   }
 }
 .intro__img {
@@ -170,28 +170,9 @@ body {
   z-index: 1;
 }
 .intro__pattern {
-  height: 21rem;
   width: 100%;
-  background-color: #181f2a;
-  position: absolute;
-  bottom: 0;
-}
-@media (min-width: 810px) {
-  .intro__pattern {
-    height: 1rem;
-  }
-}
-.intro__pattern::before {
-  content: url("../../../images/bg-curvy-mobile.svg");
-  width: 100%;
-  position: absolute;
-  bottom: 20rem;
-}
-@media (min-width: 810px) {
-  .intro__pattern::before {
-    content: url("../../../images/bg-curvy-desktop.svg");
-    bottom: 0;
-  }
+  object-fit: cover;
+  margin-top: -25rem;
 }
 
 .details {

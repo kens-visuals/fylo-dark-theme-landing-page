@@ -65,7 +65,21 @@
         </div>
       </div>
 
-      <div class="intro__pattern"></div>
+      <picture>
+        <source
+          srcset="./images/bg-curvy-mobile.svg"
+          media="(min-width: 810px)"
+          aria-hidden="true"
+          class="intro__pattern"
+        />
+
+        <img
+          src="./images/bg-curvy-desktop.svg"
+          alt=""
+          aria-hidden="true"
+          class="intro__pattern"
+        />
+      </picture>
     </section>
 
     <main class="main">
@@ -159,11 +173,11 @@
               Stay productive, wherever you are
             </h2>
 
-            <p class="description__text text text--secondary">
+            <p class="description__text text">
               Never let location be an issue when accessing your files. Fylo has
               you covered for all of your file storage needs.
             </p>
-            <p class="description__text text text--secondary">
+            <p class="description__text text">
               Securely share files and folders with friends, family and
               colleagues for live collaboration. No email attachments required.
             </p>
