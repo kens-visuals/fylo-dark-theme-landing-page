@@ -2,13 +2,19 @@
 
 .details {
   max-width: 95rem;
-  margin: 13rem 0 15rem 0;
+  padding: 25rem 0 15rem 0;
 
   @media (min-width: 810px) {
+    padding-top: 15rem;
     margin: 0 auto 15rem auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10rem;
+  }
+
+  @media (min-width: 1140px) {
+    padding: 0;
+    margin-top: -15rem;
   }
 
   & > *:not(:last-child) {

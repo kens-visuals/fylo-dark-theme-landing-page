@@ -3,7 +3,6 @@
 .intro {
   background-color: $color-primary--dark;
   padding-top: 2.2rem;
-  position: relative;
 
   @media (min-width: 810px) {
     padding-top: 8rem;
@@ -12,8 +11,6 @@
   &__img {
     margin: 5rem auto 3rem auto;
     padding: 0 1.5rem;
-    z-index: 1;
-    position: relative;
 
     @media (min-width: 810px) {
       margin: 8rem auto 3rem auto;
