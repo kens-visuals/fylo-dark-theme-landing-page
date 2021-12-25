@@ -12,7 +12,7 @@
     width: 8rem;
 
     @media (min-width: 810px) {
-      width: 15rem;
+      width: 18rem;
     }
   }
 
@@ -35,7 +35,7 @@
     &:link,
     &:visited {
       color: $color-secondary--light;
-      font-size: clamp(1.1rem, 4vw, 1.6rem);
+      font-size: clamp(1.1rem, 4vw, 1.4rem);
       font-weight: lighter;
       font-family: $font-secondary;
       text-decoration: none;
