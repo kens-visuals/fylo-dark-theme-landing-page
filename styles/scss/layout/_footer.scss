@@ -6,6 +6,7 @@
 
   &__access {
     width: inherit;
+    max-width: 90rem;
     background-color: $color-primary--dark;
     border-radius: 1rem;
     padding: 4rem 3rem;
@@ -13,18 +14,35 @@
     top: -15rem;
   }
 
+  &__wrapper {
+    padding: 27rem 0 1rem 1rem;
+
+    @media (min-width: 1140px) {
+      display: grid;
+      grid-template-columns: 40rem repeat(2, 1fr);
+      grid-template-rows: auto 1fr auto;
+      align-items: start;
+      gap: 4rem 15rem;
+    }
+  }
+
   &__text {
     padding: 0;
   }
 
   &__logo {
-    padding: 27rem 0 1rem 1rem;
   }
 
   &__info {
     &-list {
       padding: 0 1rem;
       margin: 3rem 0 8rem 0;
+
+      @media (min-width: 810px) {
+        display: grid;
+        grid-template-columns: 1fr 30rem;
+        grid-template-rows: repeat(2, auto);
+      }
     }
 
     &-item {
@@ -48,6 +66,10 @@
       &--place {
         font-size: 1.6rem;
 
+        @media (min-width: 810px) {
+          grid-row: 1 / -1;
+        }
+
         &::before {
           content: url('./../../images/icon-location.svg');
         }
@@ -60,6 +82,10 @@
       }
 
       &--email {
+        @media (min-width: 810px) {
+          grid-column: 2 / -1;
+        }
+
         &::before {
           content: url('./../../images/icon-email.svg');
         }
@@ -70,15 +96,30 @@
   &__nav {
     &-list {
       padding: 0 1rem;
+
+      @media (min-width: 810px) {
+        display: grid;
+        display: grid;
+        grid-template-columns: 20rem 10rem;
+        grid-template-rows: repeat(3, 4rem);
+      }
     }
 
     &-item {
       &:not(:last-child) {
         margin-bottom: 1.5rem;
+
+        @media (min-width: 810px) {
+          margin-bottom: 0;
+        }
       }
 
       &:nth-of-type(4) {
         margin-bottom: 5rem;
+
+        @media (min-width: 810px) {
+          margin-bottom: 0;
+        }
       }
     }
 
