@@ -51,6 +51,13 @@
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      transition: all 0.3s;
+    }
+
+    &:hover,
+    &:active {
+      color: $color-secondary--light;
+      border-bottom: 0.1rem solid $color-secondary--light;
     }
   }
 }
