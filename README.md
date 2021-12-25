@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Live Site URL: [https://kens-visuals.github.io/fylo-dark-theme-landing-page/](https://kens-visuals.github.io/fylo-dark-theme-landing-page/)
-- Solution URL: [TO_BE_UPDATED](TO_BE_UPDATED)
+- Solution URL: [https://www.frontendmentor.io/solutions/fylo-dark-theme-landing-page-with-vanilla-js-scss-and-bem-KaoA6v6wj](https://www.frontendmentor.io/solutions/fylo-dark-theme-landing-page-with-vanilla-js-scss-and-bem-KaoA6v6wj)
 
 ## My process
 
