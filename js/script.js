@@ -32,9 +32,9 @@ const validateInput = function (e) {
 };
 
 const appearOnScroll = function () {
-  const detailsOptions = {
+  const options = {
     threshold: 0.5,
-    rootMargin: '0px 0px -200px 0px',
+    rootMargin: '0px 0px -100px 0px',
   };
 
   const items = function (entries) {
@@ -48,14 +48,9 @@ const appearOnScroll = function () {
     });
   };
 
-  const detailsObserver = new IntersectionObserver(items, detailsOptions);
+  const detailsObserver = new IntersectionObserver(items, options);
 
   details.forEach((detail) => detailsObserver.observe(detail));
-
-  const testimonialsOptions = {
-    threshold: 0.5,
-    rootMargin: '0px 0px -100px 0px',
-  };
 
   const tests = function (entries) {
     entries.forEach((entry) => {
@@ -72,10 +67,7 @@ const appearOnScroll = function () {
     });
   };
 
-  const testimonialsObserver = new IntersectionObserver(
-    tests,
-    testimonialsOptions
-  );
+  const testimonialsObserver = new IntersectionObserver(tests, options);
 
   testimonials.forEach((testimonial) =>
     testimonialsObserver.observe(testimonial)
