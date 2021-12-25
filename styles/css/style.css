@@ -165,7 +165,7 @@ body {
 }
 
 .testimonials {
-  margin-bottom: 13rem;
+  margin-bottom: 35rem;
   padding: 0 2.5rem;
   display: flex;
   flex-direction: column;
@@ -247,25 +247,156 @@ body {
   gap: 0.5rem;
 }
 
+.footer {
+  background-color: #0b1523;
+  position: relative;
+}
+.footer__access {
+  width: inherit;
+  background-color: #1c2431;
+  border-radius: 1rem;
+  padding: 4rem 3rem;
+  position: absolute;
+  top: -15rem;
+}
+.footer__text {
+  padding: 0;
+}
+.footer__logo {
+  padding: 27rem 0 1rem 1rem;
+}
+.footer__info-list {
+  padding: 0 1rem;
+  margin: 3rem 0 8rem 0;
+}
+.footer__info-item {
+  max-width: 40rem;
+  color: white;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.footer__info-item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.footer__info-item::before {
+  width: 1rem;
+  margin: 0.3rem 1.5rem 0 0;
+}
+.footer__info-item--place {
+  font-size: 1.6rem;
+}
+.footer__info-item--place::before {
+  content: url("./../../images/icon-location.svg");
+}
+.footer__info-item--phone::before {
+  content: url("./../../images/icon-phone.svg");
+}
+.footer__info-item--email::before {
+  content: url("./../../images/icon-email.svg");
+}
+.footer__nav-list {
+  padding: 0 1rem;
+}
+.footer__nav-item:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.footer__nav-item:nth-of-type(4) {
+  margin-bottom: 5rem;
+}
+.footer__nav-link:link, .footer__nav-link:visited {
+  color: white;
+  text-decoration: none;
+}
+.footer__nav-link:hover, .footer__nav-link:active {
+  border-bottom: 0.1rem solid currentColor;
+}
+.footer__social-list {
+  padding: 0 1rem;
+  margin: 8rem 0 2rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+}
+.footer__social-item {
+  border: 0.1rem solid white;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.footer__social-item:hover {
+  cursor: pointer;
+  border: 0.1rem solid #202a3c;
+}
+.footer__social-item:hover .footer__social-icon {
+  fill: white;
+}
+.footer__social-link {
+  width: 2.5rem;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer__social-icon {
+  width: 1.1rem;
+  fill: white;
+  transition: all 0.3s;
+}
 .footer__attribution {
   font-size: 1rem;
   text-align: center;
+  padding-bottom: 1rem;
 }
 .footer__attribution-link:link, .footer__attribution-link:visited {
+  color: #65e2d9;
   text-transform: uppercase;
   transition: all 0.3s;
 }
-.btn:link, .btn:visited {
-  width: 24rem;
-  color: white;
+.footer__attribution-link:hover, .footer__attribution-link:active {
+  color: #339ecc;
+}
+
+.footer__form {
+  width: 100%;
+}
+.footer__input {
+  width: 100%;
+  border: 0;
+  border-radius: 5rem;
+  margin: 4rem 0 2rem 0;
+  padding: 1rem 3rem;
+}
+.footer__input::placeholder {
+  color: rgba(32, 42, 60, 0.7);
+  font-size: 1rem;
+}
+.footer__btn {
+  width: 100%;
+}
+
+.btn {
   background-image: linear-gradient(to right, #65e2d9, #339ecc);
   font-size: 1.4rem;
   font-weight: 400;
   border-radius: 5rem;
   text-align: center;
-  text-decoration: none;
   padding: 1.4rem 2rem;
   z-index: 1;
+}
+.btn--link {
+  width: 24rem;
+}
+.btn--link:link, .btn--link:visited {
+  color: white;
+  text-decoration: none;
+}
+.btn--submit {
+  width: 100%;
+  color: white;
+  border: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

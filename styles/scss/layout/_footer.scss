@@ -1,67 +1,156 @@
 @use '../abstracts/index.scss' as *;
 
 .footer {
+  background-color: $color-primary--light;
+  position: relative;
+
   &__access {
+    width: inherit;
+    background-color: $color-primary--dark;
+    border-radius: 1rem;
+    padding: 4rem 3rem;
+    position: absolute;
+    top: -15rem;
+  }
+
+  &__text {
+    padding: 0;
   }
 
   &__logo {
+    padding: 27rem 0 1rem 1rem;
   }
 
   &__info {
     &-list {
+      padding: 0 1rem;
+      margin: 3rem 0 8rem 0;
     }
 
     &-item {
+      max-width: 40rem;
+      color: $color-secondary--light;
+      font-size: 1.4rem;
+      line-height: 1.5;
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+
+      &::before {
+        width: 1rem;
+        margin: 0.3rem 1.5rem 0 0;
+      }
+
       &--place {
+        font-size: 1.6rem;
+
+        &::before {
+          content: url('./../../images/icon-location.svg');
+        }
       }
 
       &--phone {
+        &::before {
+          content: url('./../../images/icon-phone.svg');
+        }
       }
 
       &--email {
+        &::before {
+          content: url('./../../images/icon-email.svg');
+        }
       }
     }
   }
 
   &__nav {
     &-list {
+      padding: 0 1rem;
     }
 
     &-item {
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+
+      &:nth-of-type(4) {
+        margin-bottom: 5rem;
+      }
     }
 
     &-link {
+      &:link,
+      &:visited {
+        color: $color-secondary--light;
+        text-decoration: none;
+      }
+
+      &:hover,
+      &:active {
+        border-bottom: 0.1rem solid currentColor;
+      }
     }
   }
 
   &__social {
     &-list {
+      padding: 0 1rem;
+      margin: 8rem 0 2rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
     }
 
     &-item {
+      border: 0.1rem solid $color-secondary--light;
+      border-radius: 50%;
+      transition: all 0.3s;
+
+      &:hover {
+        cursor: pointer;
+        border: 0.1rem solid $color-secondary;
+
+        .footer__social-icon {
+          fill: $color-secondary--light;
+        }
+      }
     }
 
     &-link {
+      width: 2.5rem;
+      aspect-ratio: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     &-icon {
+      width: 1.1rem;
+      fill: $color-secondary--light;
+      transition: all 0.3s;
     }
   }
 
   &__attribution {
     font-size: 1rem;
     text-align: center;
+    padding-bottom: 1rem;
 
     &-link:link,
     &-link:visited {
+      color: $color-cyan;
       text-transform: uppercase;
-      // color: ;
       transition: all 0.3s;
     }
 
     &-link:hover,
     &-link:active {
-      // color: ;
+      color: $color-blue;
     }
   }
 }
