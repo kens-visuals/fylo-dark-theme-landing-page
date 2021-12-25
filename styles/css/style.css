@@ -280,7 +280,7 @@ body {
   position: relative;
 }
 .testimonial--quote::before {
-  content: url("../../../images/bg-quotes.png");
+  content: url("./../../images/bg-quotes.png");
   position: absolute;
   top: -4rem;
   left: -1rem;
