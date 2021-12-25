@@ -156,13 +156,14 @@
     &-link {
       &:link,
       &:visited {
-        color: $color-secondary--light;
+        color: rgba($color-secondary--light, 0.7);
         text-decoration: none;
+        transition: all 0.3s;
       }
 
       &:hover,
       &:active {
-        border-bottom: 0.1rem solid currentColor;
+        color: $color-secondary--light;
       }
     }
   }
@@ -191,10 +192,10 @@
 
       &:hover {
         cursor: pointer;
-        border: 0.1rem solid $color-secondary;
+        border: 0.1rem solid $color-cyan;
 
         .footer__social-icon {
-          fill: $color-secondary--light;
+          fill: $color-cyan;
         }
       }
     }

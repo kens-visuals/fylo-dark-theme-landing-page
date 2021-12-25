@@ -91,7 +91,7 @@ body {
     padding: 0 4rem;
   }
 }
-.text--tertiary {
+.text--secondary {
   font-size: 1.4rem;
   max-width: 40rem;
   padding: 0 1rem;
@@ -130,12 +130,35 @@ body {
   }
 }
 .intro__link:link, .intro__link:visited {
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
   font-size: clamp(1.1rem, 4vw, 1.4rem);
   font-weight: lighter;
   font-family: "Raleway", sans-serif;
   text-decoration: none;
   letter-spacing: 0.1rem;
+  position: relative;
+  transition: all 0.3s;
+}
+.intro__link:link::after, .intro__link:visited::after {
+  content: "";
+  width: 100%;
+  height: 0.2rem;
+  background-color: white;
+  position: absolute;
+  left: -0.5rem;
+  bottom: -0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+.intro__link:hover, .intro__link:active {
+  color: white;
+}
+.intro__link:hover::after, .intro__link:active::after {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
 }
 
 .intro {
@@ -489,11 +512,12 @@ body {
   }
 }
 .footer__nav-link:link, .footer__nav-link:visited {
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
+  transition: all 0.3s;
 }
 .footer__nav-link:hover, .footer__nav-link:active {
-  border-bottom: 0.1rem solid currentColor;
+  color: white;
 }
 .footer__social-list {
   padding: 0 1rem;
@@ -518,10 +542,10 @@ body {
 }
 .footer__social-item:hover {
   cursor: pointer;
-  border: 0.1rem solid #202a3c;
+  border: 0.1rem solid #65e2d9;
 }
 .footer__social-item:hover .footer__social-icon {
-  fill: white;
+  fill: #65e2d9;
 }
 .footer__social-link {
   width: 2.5rem;
@@ -595,11 +619,16 @@ body {
   text-align: center;
   padding: 1.4rem 2rem;
   z-index: 1;
+  transition: all 0.3s;
+}
+.btn:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to right, #65e2d9, #65e2d9);
 }
 .btn--link {
   width: 24rem;
 }
-@media (min-width: 810px) {
+@media (min-width: 1140px) {
   .btn--link {
     width: 28rem;
   }
@@ -613,7 +642,7 @@ body {
   color: white;
   border: 0;
 }
-@media (min-width: 810px) {
+@media (min-width: 1140px) {
   .btn--submit {
     width: 30rem;
   }

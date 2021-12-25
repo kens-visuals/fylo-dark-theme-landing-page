@@ -8,11 +8,17 @@
   text-align: center;
   padding: 1.4rem 2rem;
   z-index: 1;
+  transition: all 0.3s;
+
+  &:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to right, $color-cyan, $color-cyan);
+  }
 
   &--link {
     width: 24rem;
 
-    @media (min-width: 810px) {
+    @media (min-width: 1140px) {
       width: 28rem;
     }
 
@@ -28,7 +34,7 @@
     color: $color-secondary--light;
     border: 0;
 
-    @media (min-width: 810px) {
+    @media (min-width: 1140px) {
       width: 30rem;
     }
   }
