@@ -5,7 +5,7 @@
     width: 100%;
 
     @media (min-width: 1140px) {
-      margin: 4rem 0 2rem 0;
+      margin: 4rem 0 0.5rem 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -19,6 +19,11 @@
     border-radius: 5rem;
     margin: 4rem 0 2rem 0;
     padding: 1.4rem 3rem;
+    transition: all 0.3s;
+
+    &:focus-visible {
+      outline: 0.3rem solid $color-cyan;
+    }
 
     &::placeholder {
       color: rgba($color-secondary, 0.7);
@@ -28,9 +33,39 @@
     @media (min-width: 1140px) {
       margin: 0;
     }
+
+    &.input--has-error {
+      &:focus-visible {
+        outline: 0.3rem solid $color-red;
+      }
+    }
   }
 
-  &__btn {
-    width: 100%;
+  &__error {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 2rem 0 0 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+
+    @media (min-width: 1140px) {
+      text-align: left;
+      padding: 0 0 0 3rem;
+    }
+
+    &.error--is-visible,
+    &.success--is-visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &.error--is-visible {
+      color: $color-red;
+    }
+
+    &.success--is-visible {
+      color: $color-cyan;
+    }
   }
 }

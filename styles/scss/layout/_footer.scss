@@ -22,7 +22,7 @@
   }
 
   &__wrapper {
-    padding: 27rem 0 1rem 1rem;
+    padding: 30rem 0 1rem 1rem;
 
     @media (min-width: 1140px) {
       padding: 20rem 0 1rem 5rem;
@@ -66,13 +66,17 @@
 
     &-item {
       width: max-content;
-      max-width: 40rem;
-      color: $color-secondary--light;
+      max-width: 30rem;
+      color: rgba($color-secondary--light, 0.7);
       font-size: 1.4rem;
       line-height: 1.5;
       display: flex;
       align-items: flex-start;
       gap: 1rem;
+
+      @media (min-width: 810px) {
+        max-width: 40rem;
+      }
 
       &:not(:last-child) {
         margin-bottom: 1.5rem;
@@ -216,13 +220,12 @@
   }
 
   &__attribution {
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-align: center;
     padding-bottom: 1rem;
 
     @media (min-width: 1140px) {
-      text-align: left;
-      grid-column: 1 / 2;
+      grid-column: 2 / 4;
     }
 
     &-link:link,
