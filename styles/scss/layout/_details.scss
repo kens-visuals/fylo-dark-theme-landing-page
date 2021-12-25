@@ -1,7 +1,7 @@
 @use '../abstracts/index.scss' as *;
 
 .details {
-  margin: 13rem 0;
+  margin: 13rem 0 15rem 0;
 
   & > *:not(:last-child) {
     margin-bottom: 9rem;

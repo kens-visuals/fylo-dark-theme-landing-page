@@ -1,21 +1,62 @@
 @use '../abstracts/index.scss' as *;
 
 .testimonials {
+  margin-bottom: 13rem;
+  padding: 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .testimonial {
+  background-color: $color-secondary;
+  padding: 2rem;
+
+  &--quote {
+    position: relative;
+
+    &::before {
+      content: url('../../../images/bg-quotes.png');
+      position: absolute;
+      top: -3rem;
+      left: -1rem;
+      z-index: -1;
+      transform: scale(0.4);
+    }
+  }
+
+  &__text {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 2;
+    padding: 0;
+  }
+
   &__user {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
   }
 
   &__img {
+    width: 2.5rem;
+    border-radius: 50%;
   }
 
   &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
   }
 
   &__name {
+    font-size: 1rem;
+    font-weight: 700;
   }
 
   &__status {
+    font-size: 0.8rem;
+    opacity: 0.9;
   }
 }

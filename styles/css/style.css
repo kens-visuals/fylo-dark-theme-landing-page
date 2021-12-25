@@ -60,7 +60,7 @@ body {
   font-weight: 700;
 }
 .heading--secondary {
-  font-weight: 700;
+  font-size: 1.8rem;
 }
 .heading--tertiary {
   font-size: 1.8rem;
@@ -144,7 +144,7 @@ body {
 }
 
 .details {
-  margin: 13rem 0;
+  margin: 13rem 0 15rem 0;
 }
 .details > *:not(:last-child) {
   margin-bottom: 9rem;
@@ -162,6 +162,89 @@ body {
 }
 .detail:nth-child(2) .detail__img {
   width: 5.5rem;
+}
+
+.testimonials {
+  margin-bottom: 13rem;
+  padding: 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.testimonial {
+  background-color: #202a3c;
+  padding: 2rem;
+}
+.testimonial--quote {
+  position: relative;
+}
+.testimonial--quote::before {
+  content: url("../../../images/bg-quotes.png");
+  position: absolute;
+  top: -3rem;
+  left: -1rem;
+  z-index: -1;
+  transform: scale(0.4);
+}
+.testimonial__text {
+  font-size: 1rem;
+  text-align: left;
+  line-height: 2;
+  padding: 0;
+}
+.testimonial__user {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.testimonial__img {
+  width: 2.5rem;
+  border-radius: 50%;
+}
+.testimonial__info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.testimonial__name {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.testimonial__status {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.description {
+  padding: 0 0.5rem;
+  margin-bottom: 20rem;
+}
+.description__img {
+  padding: 0 0.5rem;
+  margin-bottom: 5rem;
+}
+.description__heading {
+  text-align: left;
+}
+.description__text {
+  font-size: 1.4rem;
+  text-align: left;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.description__link:link, .description__link:visited {
+  width: max-content;
+  color: #65e2d9;
+  font-size: 1rem;
+  letter-spacing: 0.1rem;
+  text-decoration: none;
+  border-bottom: 0.1rem solid #65e2d9;
+  padding-bottom: 0.3rem;
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
 }
 
 .footer__attribution {
