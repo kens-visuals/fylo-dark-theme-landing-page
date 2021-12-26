@@ -1,10 +1,9 @@
 const form = document.querySelector('.js-form');
 const errorTxt = document.querySelector('.js-error');
-
-const details = [...document.querySelector('.js-details').children];
-const testimonials = [...document.querySelector('.js-testimonials').children];
 const desc = document.querySelector('.js-description');
 const descImg = document.querySelector('.js-description-img');
+const details = [...document.querySelector('.js-details').children];
+const testimonials = [...document.querySelector('.js-testimonials').children];
 
 const [input, btn] = form.children;
 
@@ -31,47 +30,30 @@ const validateInput = function (e) {
   }
 };
 
-const appearOnScroll = function () {
+const onScrollAnim = function (items) {
   const options = {
     threshold: 0.5,
     rootMargin: '0px 0px -100px 0px',
   };
 
-  const items = function (entries) {
+  const callback = function (entries) {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
 
-      details.forEach((detail, i) => {
-        setTimeout(() => detail.classList.add('is-visible'), (i + 4) * 100);
-        detailsObserver.unobserve(detail);
-      });
-    });
-  };
-
-  const detailsObserver = new IntersectionObserver(items, options);
-
-  details.forEach((detail) => detailsObserver.observe(detail));
-
-  const tests = function (entries) {
-    entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-
-      testimonials.forEach((testimonial, i) => {
+      items.forEach((item, i, arr) => {
         setTimeout(
-          () => testimonial.classList.add('is-visible'),
-          (i + 4) * 100
+          () => item.classList.add('is-visible'),
+          (i + arr.length + 1) * 100
         );
 
-        testimonialsObserver.unobserve(testimonial);
+        observer.unobserve(item);
       });
     });
   };
 
-  const testimonialsObserver = new IntersectionObserver(tests, options);
+  const observer = new IntersectionObserver(callback, options);
 
-  testimonials.forEach((testimonial) =>
-    testimonialsObserver.observe(testimonial)
-  );
+  items.forEach((item) => observer.observe(item));
 };
 
 const slideOnScroll = function () {
@@ -80,24 +62,25 @@ const slideOnScroll = function () {
     rootMargin: '0px 0px -200px 0px',
   };
 
-  const items = function (entries) {
+  const callback = function (entries) {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
 
-      desc.classList.add('is-visible');
-      descImg.classList.add('is-visible');
+      [desc, descImg].forEach((el) => {
+        el.classList.add('is-visible');
 
-      [descImg, desc].forEach((el) => imgObserver.unobserve(el));
+        imgObserver.unobserve(el);
+      });
     });
   };
 
-  const imgObserver = new IntersectionObserver(items, option);
+  const imgObserver = new IntersectionObserver(callback, option);
 
   [descImg, desc].forEach((el) => imgObserver.observe(el));
 };
 
 form.addEventListener('submit', validateInput);
 window.addEventListener('DOMContentLoaded', () => {
-  appearOnScroll();
+  [details, testimonials].forEach((el) => onScrollAnim(el));
   slideOnScroll();
 });
